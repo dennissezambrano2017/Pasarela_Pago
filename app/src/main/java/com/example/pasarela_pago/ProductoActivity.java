@@ -2,9 +2,7 @@ package com.example.pasarela_pago;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,7 +30,6 @@ public class ProductoActivity extends Fragment {
     private RecyclerView lstFrutas;
     private Frutas frutas;
     private ArrayList<Frutas> list_Fru;
-    private ArrayList<Frutas> list_Carrito;
     private RequestQueue requestQueue;
 
     @Nullable
@@ -42,7 +39,6 @@ public class ProductoActivity extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_item, container, false);
         frutas = new Frutas();
         list_Fru = new ArrayList<>();
-        list_Carrito = new ArrayList<>();
         lstFrutas = (RecyclerView) rootView.findViewById(R.id.lstFrutas);
         lstFrutas.setLayoutManager(new LinearLayoutManager(getContext()));
         requestQueue = Volley.newRequestQueue(getContext());
@@ -82,20 +78,4 @@ public class ProductoActivity extends Fragment {
         requestQueue.add(request);
     }
 
-    /*public void LLenarCarrito(double precio, String nombre, int cantidad, double Total) {
-        list_Carrito.add(new Frutas(nombre, precio, cantidad, Total));
-        Log.d("Si", "entro");
-        Log.d("Si", String.valueOf(cantl()));
-    }*/
-    public int cantl(){
-        return getList_Carrito().size();
-    }
-
-    public ArrayList<Frutas> getList_Carrito() {
-        return list_Carrito;
-    }
-
-    public void setList_Carrito(ArrayList<Frutas> list_Carrito) {
-        this.list_Carrito = list_Carrito;
-    }
 }

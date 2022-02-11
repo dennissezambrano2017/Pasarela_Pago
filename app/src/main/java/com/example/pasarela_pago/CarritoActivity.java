@@ -1,6 +1,5 @@
 package com.example.pasarela_pago;
 
-import android.content.Intent;
 import android.icu.text.DecimalFormat;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,8 +18,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -28,24 +25,13 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.squareup.picasso.Picasso;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.UUID;
 
 public class CarritoActivity extends Fragment {
@@ -57,7 +43,6 @@ public class CarritoActivity extends Fragment {
     EditText txtTelefon;
     private final String TOKEN = "gJsnfekxexMD8spVr4fTOHSFO-QPlRSycuOAEjLSzVTrUSb6AlHZPRqCFvm3VSWimbAw4EaMkWRlPdNa6fIZj3Uphd2lX1ztBGG52eKgi-wKlcXCchnFhBWSHtEUhxgf3Fo1lKaPfbBUXzekLVH0sTLXxUjUMaMAAlyiiSm0l1xjDsVvT66JIaT2cklotBU12fStVZT_qbVNu3z6WE5tcYPX30DuqBj-LLo07iAoqwm-W60kB6lihoC8lwnoXV4Gdod6RRr7G5H47O8Dw-7gOkGc7IVHsX-1cj9OPNjTq0Dado47-jbkLTszlUZWMoHhTb1udg";
 
-    ProductoActivity productoActivity = new ProductoActivity();
 
     @Nullable
     @Override
