@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+
+        <item
+
+            android:id="@+id/nav_Carrito"
+            android:icon="@drawable/ic_baseline_add_shopping_cart_24"
+            android:title="Carrito" />
+        <item
+            android:id="@+id/nav_Incio"
+            android:icon="@drawable/ic_baseline_attach_money_24"
+            android:title="Pago" />
+    </group>
+
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="Otras Opciones">
+        <menu>
+            <item
+                android:id="@+id/nav_Ajuste"
+                android:icon="@drawable/ic_baseline_settings_24"
+                android:title="Ajustes" />
+        </menu>
+    </item>
+</menu>
